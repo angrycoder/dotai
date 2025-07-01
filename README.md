@@ -13,22 +13,23 @@ A project template that combines three powerful AI development tools:
 ## Getting Started
 
 1. **Launch Claude Code**
+
    ```bash
    claude
    ```
 
 2. **Open Task Studio** (optional web interface)
+
    ```bash
    npx task-studio@latest
    ```
 
 3. **Follow the workflow:**
-   - `/create-app-design-document` - Define your app
-   - `/create-tech-stack` - Choose technologies
-   - `/prd` - Write requirements
-   - `/parse` - Convert to tasks
-   - `/next` - Start coding
-   - `/done` - Complete tasks
+   - `/app-design:create` - Explain your app
+   - `/tech-stack:create` - Choose technologies
+   - `/prd:create-interactive` - Write feature requirements
+   - `/prd:parse` - Convert to tasks
+   - `/task:next` - Start coding
 
 ## How It Works
 
@@ -49,32 +50,33 @@ You don't need to memorize commands. Simply ask Claude to:
 
 ### Quick Reference
 
-| Command | Description | Category |
-|---------|-------------|----------|
-| `/create-app-design-document` | Generate comprehensive app design document with project stage assessment | Planning |
-| `/create-tech-stack` | Generate technical stack documentation from codebase analysis | Planning |
-| `/prd` | Create PRD interactively with clarifying questions | Planning |
-| `/prd-quick` | Create PRD directly without questions for simple features | Planning |
-| `/parse` | Parse PRD into Task Master tasks with optional tag creation | Tasks |
-| `/next` | Get next task and start implementing immediately | Tasks |
-| `/done` | Mark task complete and optionally get next task | Tasks |
-| `/show` | Show specific task details (e.g., `/show 2.1`) | Tasks |
-| `/list` | List all tasks in current tag | Tasks |
-| `/add` | Add one or more tasks to current tag | Tasks |
-| `/add-interactive` | Add tasks interactively with questions | Tasks |
-| `/update` | Update tasks based on implementation changes | Tasks |
-| `/update-interactive` | Update tasks interactively with questions | Tasks |
-| `/expand` | Break down tasks into subtasks | Tasks |
-| `/move` | Reorganize task structure | Tasks |
-| `/sync-app-design-document` | Update app design document based on codebase changes | Updates |
-| `/sync-tech-stack` | Update tech stack documentation after dependency changes | Updates |
-| `/sync-rules` | Synchronize Cursor rules to CLAUDE.md | Updates |
-| `/create-rule` | Create new Cursor rule file with proper structure | Rules |
-| `/research` | Research best practices and update tasks | Research |
-| `/research-tech` | Research technologies, frameworks, and tools | Research |
-| `/research-security` | Research security best practices and vulnerabilities | Research |
-| `/research-architecture` | Research architectural patterns and best practices | Research |
-| `/debug` | Systematic debugging process for complex issues | Support |
+| Command                    | Description                                                              | Category |
+| -------------------------- | ------------------------------------------------------------------------ | -------- |
+| `/app-design:create`       | Generate comprehensive app design document with project stage assessment | Planning |
+| `/app-design:update`       | Update app design document based on codebase changes                     | Planning |
+| `/tech-stack:create`       | Generate technical stack documentation from codebase analysis            | Planning |
+| `/tech-stack:update`       | Update tech stack documentation after dependency changes                 | Planning |
+| `/prd:create-interactive`  | Create PRD interactively with clarifying questions                       | Planning |
+| `/prd:create`              | Create PRD directly without questions for simple features                | Planning |
+| `/prd:parse`               | Parse PRD into Task Master tasks with optional tag creation              | Tasks    |
+| `/task:next`               | Get next task and start implementing immediately                         | Tasks    |
+| `/task:done`               | Mark task complete and optionally get next task                          | Tasks    |
+| `/task:show`               | Show specific task details (e.g., `/task:show 2.1`)                      | Tasks    |
+| `/task:list`               | List all tasks in current tag                                            | Tasks    |
+| `/task:add`                | Add one or more tasks to current tag                                     | Tasks    |
+| `/task:add-interactive`    | Add tasks interactively with questions                                   | Tasks    |
+| `/task:update`             | Update tasks based on implementation changes                             | Tasks    |
+| `/task:update-interactive` | Update tasks interactively with questions                                | Tasks    |
+| `/task:expand`             | Break down tasks into subtasks                                           | Tasks    |
+| `/task:move`               | Reorganize task structure                                                | Tasks    |
+| `/task:research`           | Research best practices and update tasks                                 | Tasks    |
+| `/rules:create`            | Create new Cursor rule file with proper structure                        | Rules    |
+| `/rules:update`            | Synchronize Cursor rules to CLAUDE.md                                    | Rules    |
+| `/research:task`           | Research best practices for specific tasks                               | Research |
+| `/research:tech`           | Research technologies, frameworks, and tools                             | Research |
+| `/research:security`       | Research security best practices and vulnerabilities                     | Research |
+| `/research:architecture`   | Research architectural patterns and best practices                       | Research |
+| `/debug`                   | Systematic debugging process for complex issues                          | Support  |
 
 ### Command Details
 

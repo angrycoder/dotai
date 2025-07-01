@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-<!-- Run /project:app-design:create to generate app design document -->
-<!-- Run /project:tech-stack:create to generate tech stack documentation -->
+<!-- Run /app-design:create to generate app design document -->
+<!-- Run /tech-stack:create to generate tech stack documentation -->
 
 - App Design: @.taskmaster/docs/app-design-document.md
 - Tech Stack: @.taskmaster/docs/tech-stack.md
@@ -55,42 +55,42 @@
 
 ### Task Management
 
-- `/next` - Get next task and start implementing
-- `/list` - List all tasks
-- `/show <id>` - Show task details
-- `/done <id>` - Mark task complete
-- `/add` - Add one or more tasks
-- `/add-interactive` - Add tasks with clarifying questions
-- `/parse` - Parse PRD into tasks
-- `/expand <id>` - Break down complex tasks
-- `/move <from> to <to>` - Reorganize tasks
+- `/task:next` - Get next task and start implementing
+- `/task:list` - List all tasks
+- `/task:show <id>` - Show task details
+- `/task:done <id>` - Mark task complete
+- `/task:add` - Add one or more tasks
+- `/task:add-interactive` - Add tasks with clarifying questions
+- `/prd:parse` - Parse PRD into tasks
+- `/task:expand <id>` - Break down complex tasks
+- `/task:move <from> to <to>` - Reorganize tasks
 
 ### Task Updates
 
-- `/project:task:update` - Update tasks based on changes
-- `/project:task:update-interactive` - Update tasks with clarifying questions
-- `/project:task:research` - Research best practices
+- `/task:update` - Update tasks based on changes
+- `/task:update-interactive` - Update tasks with clarifying questions
+- `/task:research` - Research best practices
 
 ### Research
 
-- `/project:research:task` - Research for specific tasks
-- `/project:research:architecture` - Research system design
-- `/project:research:tech` - Research technologies
-- `/project:research:security` - Research security practices
+- `/research:task` - Research for specific tasks
+- `/research:architecture` - Research system design
+- `/research:tech` - Research technologies
+- `/research:security` - Research security practices
 
 ### Documentation
 
-- `/project:app-design:create` - Create app design document
-- `/project:app-design:update` - Update app design document
-- `/project:tech-stack:create` - Create tech stack documentation
-- `/project:tech-stack:update` - Update tech stack documentation
-- `/project:prd:interactive` - Create PRD with Q&A
-- `/project:prd:direct` - Create PRD without questions
+- `/app-design:create` - Create app design document
+- `/app-design:update` - Update app design document
+- `/tech-stack:create` - Create tech stack documentation
+- `/tech-stack:update` - Update tech stack documentation
+- `/prd:create-interactive` - Create PRD with Q&A
+- `/prd:create` - Create PRD without questions
 
 ### Development Tools
 
-- `/project:rules:create` - Create new Cursor rule
-- `/project:rules:update` - Update existing Cursor rule
+- `/rules:create` - Create new Cursor rule
+- `/rules:update` - Update existing Cursor rule
 
 ## Development Guidelines
 
@@ -131,4 +131,4 @@ project/
 
 - Never work directly on the `master` tag - always create feature tags
 - Run typecheck before committing
-- Use `/next` to automatically get and start implementing tasks
+- Use `/task:next` to automatically get and start implementing tasks

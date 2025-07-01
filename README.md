@@ -18,7 +18,7 @@ A project template that combines three powerful AI development tools:
 claude
 ```
 
-## Task Studio
+### Task Studio
 
 Web interface for your tasks: [**Task Studio**](https://github.com/udecode/task-studio)
 

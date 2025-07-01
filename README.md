@@ -66,6 +66,14 @@ Get your first task and start coding!
 
 Mark tasks complete as you finish them.
 
+## Task UI (Optional)
+
+Visual web interface for your tasks: [**Task UI**](https://github.com/udecode/task-ui)
+
+```bash
+.taskmaster/scripts/ui.sh
+```
+
 ## How It Works
 
 Claude Code understands your project through:

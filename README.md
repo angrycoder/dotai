@@ -12,67 +12,23 @@ A project template that combines three powerful AI development tools:
 
 ## Getting Started
 
-### Launch Claude Code
+1. **Launch Claude Code**
+   ```bash
+   claude
+   ```
 
-```bash
-claude
-```
+2. **Open Task Studio** (optional web interface)
+   ```bash
+   npx task-studio@latest
+   ```
 
-### Task Studio
-
-Web interface for your tasks: [**Task Studio**](https://github.com/udecode/task-studio)
-
-```bash
-npx task-studio@latest
-```
-
-### Create App Design Document
-
-```bash
-/create-app-design-document
-```
-
-Describe what your app does - its purpose, features, and target users.
-
-### Define Tech Stack
-
-```bash
-/create-tech-stack
-```
-
-Choose your technologies - framework, database, hosting, etc.
-
-### Write Product Requirements
-
-```bash
-/prd
-```
-
-Create detailed requirements for your first feature.
-
-### Parse Requirements into Tasks
-
-```bash
-/parse
-```
-
-Convert your PRD into actionable development tasks.
-
-### Start Development
-
-```bash
-/next
-```
-
-Get your first task and start coding!
-
-### Complete Tasks
-
-```bash
-/done
-```
-
-Mark tasks complete as you finish them.
+3. **Follow the workflow:**
+   - `/create-app-design-document` - Define your app
+   - `/create-tech-stack` - Choose technologies
+   - `/prd` - Write requirements
+   - `/parse` - Convert to tasks
+   - `/next` - Start coding
+   - `/done` - Complete tasks
 
 ## How It Works
 
@@ -91,111 +47,38 @@ You don't need to memorize commands. Simply ask Claude to:
 
 ## Commands
 
-### Planning & Documentation
+### Quick Reference
 
-#### /create-app-design-document
+| Command | Description | Category |
+|---------|-------------|----------|
+| `/create-app-design-document` | Generate comprehensive app design document with project stage assessment | Planning |
+| `/create-tech-stack` | Generate technical stack documentation from codebase analysis | Planning |
+| `/prd` | Create PRD interactively with clarifying questions | Planning |
+| `/prd-quick` | Create PRD directly without questions for simple features | Planning |
+| `/parse` | Parse PRD into Task Master tasks with optional tag creation | Tasks |
+| `/next` | Get next task and start implementing immediately | Tasks |
+| `/done` | Mark task complete and optionally get next task | Tasks |
+| `/show` | Show specific task details (e.g., `/show 2.1`) | Tasks |
+| `/list` | List all tasks in current tag | Tasks |
+| `/add` | Add one or more tasks to current tag | Tasks |
+| `/add-interactive` | Add tasks interactively with questions | Tasks |
+| `/update` | Update tasks based on implementation changes | Tasks |
+| `/update-interactive` | Update tasks interactively with questions | Tasks |
+| `/expand` | Break down tasks into subtasks | Tasks |
+| `/move` | Reorganize task structure | Tasks |
+| `/sync-app-design-document` | Update app design document based on codebase changes | Updates |
+| `/sync-tech-stack` | Update tech stack documentation after dependency changes | Updates |
+| `/sync-rules` | Synchronize Cursor rules to CLAUDE.md | Updates |
+| `/create-rule` | Create new Cursor rule file with proper structure | Rules |
+| `/research` | Research best practices and update tasks | Research |
+| `/research-tech` | Research technologies, frameworks, and tools | Research |
+| `/research-security` | Research security best practices and vulnerabilities | Research |
+| `/research-architecture` | Research architectural patterns and best practices | Research |
+| `/debug` | Systematic debugging process for complex issues | Support |
 
-Creates a comprehensive Application Design Document from codebase analysis.
+### Command Details
 
-- Analyzes existing codebase for features and architecture
-- Asks 5-8 clarifying questions about project stage and business goals
-- Updates CLAUDE.md Project Status section with development priorities
-- Generates high-level app overview focusing on "what" not "how"
-- Saves to `.taskmaster/docs/app-design-document.md`
-
-#### /create-tech-stack
-
-Documents the complete technical stack and development setup.
-
-- Deep analysis of package.json, configs, and code structure
-- Asks 4-6 questions about deployment, hosting, and workflow
-- Covers languages, frameworks, databases, tools, and infrastructure
-- Includes specific versions, configurations, and setup details
-- Saves to `.taskmaster/docs/tech-stack.md`
-
-#### /prd
-
-Creates a detailed Product Requirements Document for a new feature.
-
-- Analyzes existing codebase to understand integration points
-- Asks 4-6 clarifying questions about goals, users, and scope
-- Follows structured format with context and technical sections
-- Written for junior developers with clear, actionable requirements
-- Saves to `.taskmaster/docs/prd-[feature-name].md`
-
-### Task Management
-
-#### /parse
-
-Converts a PRD into actionable Task Master tasks.
-
-- Creates new feature tag with description
-- Switches to the new tag
-- Parses PRD into structured, dependency-ordered tasks
-- Ready for development workflow with `/next`
-
-#### /next
-
-Shows the next available task in current tag context.
-
-- Finds tasks with satisfied dependencies
-- Displays complete task details and implementation plan
-- Provides summary and suggests first implementation step
-- Respects project's logical development sequence
-
-#### /done
-
-Marks current task as complete and shows next task.
-
-- Reviews task details for completion verification
-- Runs relevant tests if applicable
-- Sets task status to 'done' in Task Master
-- Automatically shows next available task
-
-### Maintenance & Updates
-
-#### /sync-app-design-document
-
-Updates existing app design document after project changes.
-
-- Asks about project stage changes first
-- Identifies new, changed, or removed features from codebase
-- Preserves accurate existing content, adds new information
-- Updates CLAUDE.md Project Status if stage evolved
-- Maintains high-level, business-focused perspective
-
-#### /sync-tech-stack
-
-Updates tech documentation after dependency or infrastructure changes.
-
-- Analyzes package.json changes and configuration updates
-- Asks about hosting, deployment, and tooling evolution
-- Updates versions, tools, and technical specifications
-- Preserves accurate content while reflecting current state
-- Maintains technical precision with exact versions
-
-#### /sync-rules
-
-Synchronizes Cursor rules to CLAUDE.md Development Rules section.
-
-- Scans all `.cursor/rules/*.mdc` files automatically
-- Organizes rules by logical categories
-- Updates references with context and applicability
-- Ensures Claude Code follows same patterns as Cursor
-
-### Development Support
-
-#### /debug
-
-Systematic debugging process for complex issues.
-
-#### /architect
-
-Comprehensive system design and architecture planning.
-
-#### /ux
-
-Creates comprehensive UX/UI design documentation.
+All commands follow a pattern of analyzing your project context and providing intelligent assistance. Commands in the Planning category typically ask clarifying questions to ensure accurate output. Task commands work within your current tag context. Research commands leverage web search for up-to-date information beyond the knowledge cutoff.
 
 ## Tips
 

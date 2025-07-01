@@ -44,6 +44,7 @@ alwaysApply: true
   - Add examples from actual codebase
   - Remove outdated patterns
   - Cross-reference related rules
+  - Update CLAUDE.md if new slash commands or guidelines are added
 
 - **Best Practices:**
   - Use bullet points for clarity

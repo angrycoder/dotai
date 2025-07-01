@@ -69,4 +69,5 @@ alwaysApply: true
   - Update references to external docs
   - Maintain links between related rules
   - Document breaking changes
+  - Update CLAUDE.md when adding new rules or slash commands
 Follow  for proper rule formatting and structure.

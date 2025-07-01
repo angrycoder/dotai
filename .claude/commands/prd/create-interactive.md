@@ -1,22 +1,50 @@
-# Rule: Generating a Product Requirements Document (PRD)
+---
+allowed-tools: Bash, Read, Write, Glob, Grep, Task, TodoWrite, mcp__taskmaster-ai__parse_prd
+description: Generate a PRD interactively with clarifying questions for complex features
+---
 
-> $ARGUMENTS
+# Generate a Product Requirements Document (PRD)
+
+## Context
+
+- **User Request:** $ARGUMENTS
+- **Project Root:** !`pwd`
+- **Existing PRDs:** !`ls -la .taskmaster/docs/prd-*.md 2>/dev/null || echo "No existing PRDs found"`
+- **Project Status:** @CLAUDE.md#project-status
+- **Tech Stack:** @.taskmaster/docs/tech-stack.md
+- **PRD Template:** @.taskmaster/templates/example_prd.md
 
 ## Goal
 
-To guide an AI assistant in creating a detailed Product Requirements Document (PRD) in Markdown format, based on an initial user prompt. The PRD should follow the `.taskmaster/templates/example_prd.md` structure and be clear, actionable, and suitable for a junior developer to understand and implement the feature.
+To create a detailed Product Requirements Document (PRD) in Markdown format. The PRD should be clear, actionable, and suitable for a junior developer to understand and implement.
 
 ## Process
 
-1. **Receive Initial Prompt:** The user provides a brief description or request for a new feature or functionality.
-2. **Analyze Existing Codebase:** Deeply reflect upon the changes being asked and analyze existing code to map the full scope of changes needed. Review relevant components, systems, and patterns already in place.
-3. **Ask Clarifying Questions:** Before writing the PRD, the AI _must_ ask 4-6 (more only if needed) clarifying questions based on your findings from the codebase analysis. The goal is to understand the "what" and "why" of the feature, not necessarily the "how" (which the developer will figure out). Make sure to provide options in letter/number lists so I can respond easily with my selections.
-4. **Generate PRD:** Based on the initial prompt and the user's answers to the clarifying questions, generate a PRD using the structure outlined below.
-5. **Save PRD:** Save the generated document as `prd-[feature-name].md` inside the `.taskmaster/docs/` directory.
+1. **Analyze Feature Request:** Think deeply about the user's feature request and its implications for the codebase.
 
-## Clarifying Questions (Examples)
+2. **Codebase Analysis:** 
+   - Search for relevant existing code patterns
+   - Review components that might be affected
+   - Identify potential integration points
+   - Consider architectural impacts
 
-The AI should adapt its questions based on the prompt, but here are some common areas to explore:
+3. **Ask Clarifying Questions:** 
+   - Ask 4-6 targeted questions based on codebase analysis
+   - Provide lettered/numbered options for easy response
+   - Focus on understanding the "what" and "why", not the "how"
+
+4. **Generate PRD:** 
+   - Follow the example PRD structure exactly
+   - Include all required sections from the template
+   - Ensure clarity for junior developers
+
+5. **Save and Next Steps:**
+   - Save as `prd-[feature-name].md` in `.taskmaster/docs/`
+   - Suggest running Task Master parse command
+
+## Clarifying Questions Framework
+
+Adapt questions based on the specific feature request provided above. Consider these areas:
 
 - **Problem/Goal:** "What problem does this feature solve for the user?" or "What is the main goal we want to achieve with this feature?"
 - **Target User:** "Who is the primary user of this feature?"
@@ -32,9 +60,9 @@ The AI should adapt its questions based on the prompt, but here are some common 
 - **Success Criteria:** "How will we know when this feature is successfully implemented?"
 - **Edge Cases:** "Are there any potential risks or technical challenges we should consider?"
 
-## PRD Structure
+## PRD Structure Requirements
 
-The generated PRD must follow the `.taskmaster/templates/example_prd.md` structure with two main sections:
+The PRD must follow the exact structure from @.taskmaster/templates/example_prd.md:
 
 ### `<context>` Section
 
@@ -63,7 +91,21 @@ Assume the primary reader of the PRD is a **junior developer**. Therefore, requi
 
 ## Final Instructions
 
-1. Do NOT start implementing the PRD
-2. Make sure to ask the user clarifying questions with lettered/numbered options for easy selection
-3. Take the user's answers to the clarifying questions and generate a complete PRD following the example_prd.md structure
-4. After saving the PRD, suggest using the `/parse` command to convert it into Task Master tasks
+1. **Think deeply** about the feature request and its architectural implications
+2. **Do NOT start implementing** - only create the PRD document
+3. **Ask clarifying questions** with lettered/numbered options
+4. **Generate complete PRD** following the template structure exactly
+5. **Save the PRD** to `.taskmaster/docs/prd-[feature-name].md`
+6. **Suggest next step:** "Use `/parse` or `task-master parse-prd .taskmaster/docs/prd-[feature-name].md` to convert this PRD into Task Master tasks"
+
+## Example Usage
+
+```
+/project:prd user authentication system
+```
+
+This will:
+1. Analyze the codebase for existing auth patterns
+2. Ask questions about auth requirements
+3. Generate a comprehensive PRD
+4. Save it as `prd-user-authentication.md`

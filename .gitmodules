@@ -1,0 +1,3 @@
+[submodule ".taskmaster/ui"]
+	path = .taskmaster/ui
+	url = https://github.com/udecode/task-ui.git

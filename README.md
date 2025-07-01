@@ -18,6 +18,14 @@ A project template that combines three powerful AI development tools:
 claude
 ```
 
+## Task Studio
+
+Web interface for your tasks: [**Task Studio**](https://github.com/udecode/task-studio)
+
+```bash
+npx task-studio@latest
+```
+
 ### Create App Design Document
 
 ```bash
@@ -65,14 +73,6 @@ Get your first task and start coding!
 ```
 
 Mark tasks complete as you finish them.
-
-## Task UI (Optional)
-
-Visual web interface for your tasks: [**Task UI**](https://github.com/udecode/task-ui)
-
-```bash
-.taskmaster/scripts/ui.sh
-```
 
 ## How It Works
 

@@ -12,6 +12,7 @@ description: Update tech stack documentation based on dependency changes and tec
 - Project root: !`pwd`
 - Package.json: @package.json
 - Current tech doc: @.taskmaster/docs/tech-stack.md
+- **Project Structure:** !`bash .claude/scripts/tree.sh`
 - Last modified: !`stat -f "%Sm" .taskmaster/docs/tech-stack.md 2>/dev/null || echo "No existing document"`
 - Recent package changes: !`git diff HEAD~10 HEAD -- package.json 2>/dev/null | grep -E "^[+-]" | head -20 || echo "No recent changes"`
 
@@ -217,7 +218,6 @@ When adding major new tools:
 ### Conditional Updates:
 
 - **Architecture:** Only if fundamental changes
-- **Project Structure:** Only if reorganized
 - **Conventions:** Only if standards changed
 
 ## Execution Steps

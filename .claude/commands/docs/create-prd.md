@@ -11,6 +11,7 @@ description: Generate a PRD directly without questions for simple, well-defined 
 - **Project Root:** !`pwd`
 - **Existing PRDs:** !`ls -la .taskmaster/docs/prd-*.md 2>/dev/null || echo "No existing PRDs found"`
 - **Project Status:** @CLAUDE.md#project-status
+- **Project Structure:** !`bash .claude/scripts/tree.sh`
 - **Tech Stack:** @.taskmaster/docs/tech-stack.md
 - **PRD Template:** @.taskmaster/templates/example_prd.md
 
@@ -20,18 +21,21 @@ To quickly create a Product Requirements Document (PRD) without asking clarifyin
 
 ## Process
 
-1. **Analyze Feature Request:** 
+1. **Analyze Feature Request:**
+
    - Think deeply about the user's feature request
    - Make reasonable assumptions based on common patterns
    - Review existing codebase for context
 
-2. **Codebase Analysis:** 
+2. **Codebase Analysis:**
+
    - Search for relevant existing code patterns
    - Review components that might be affected
    - Identify potential integration points
    - Consider architectural impacts
 
-3. **Generate PRD Immediately:** 
+3. **Generate PRD Immediately:**
+
    - Follow the example PRD structure exactly
    - Include all required sections from the template
    - Make reasonable assumptions for unclear requirements
@@ -63,6 +67,7 @@ The PRD must follow the exact structure from @.taskmaster/templates/example_prd.
 ## Assumptions Section
 
 When using quick mode, include an "Assumptions" section at the beginning of the PRD documenting:
+
 - Key assumptions made about requirements
 - Default choices for ambiguous features
 - Suggested areas that may need refinement
@@ -83,6 +88,7 @@ When using quick mode, include an "Assumptions" section at the beginning of the 
 ```
 
 This will:
+
 1. Analyze the codebase for existing user/profile patterns
 2. Make assumptions about profile fields and avatar requirements
 3. Generate a comprehensive PRD immediately
@@ -92,12 +98,14 @@ This will:
 ## When to Use Quick Mode
 
 ✅ **Good for:**
+
 - Simple CRUD features
 - Standard UI components
 - Well-defined integrations
 - Features with clear precedent in codebase
 
 ❌ **Avoid for:**
+
 - Complex architectural changes
 - Features with many unknowns
 - Security-critical features

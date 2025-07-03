@@ -202,13 +202,6 @@ The generated document must follow this technical structure:
 - Security testing
 - Code review process
 
-### **Project Structure**
-
-- Folder organization and conventions
-- Module system and imports
-- Configuration files
-- Environment variables
-- Build artifacts and outputs
 
 ### **Schemas & Data Models**
 

@@ -25,11 +25,11 @@ A project template that combines three powerful AI development tools:
    ```
 
 3. **Follow the workflow:**
-   - `/app-design:create` - Explain your app
-   - `/tech-stack:create` - Choose technologies
-   - `/prd:create-interactive` - Write feature requirements
-   - `/prd:parse` - Convert to tasks
-   - `/task:next` - Start coding
+   - `/create-app-design` - Explain your app
+   - `/create-tech-stack` - Choose technologies
+   - `/create-prd-interactive` - Write feature requirements
+   - `/parse-prd` - Convert to tasks
+   - `/next` - Start coding
 
 ## How It Works
 
@@ -50,37 +50,39 @@ You don't need to memorize commands. Simply ask Claude to:
 
 ### Quick Reference
 
-| Command                    | Description                                                              | Category |
-| -------------------------- | ------------------------------------------------------------------------ | -------- |
-| `/app-design:create`       | Generate comprehensive app design document with project stage assessment | Planning |
-| `/app-design:update`       | Update app design document based on codebase changes                     | Planning |
-| `/tech-stack:create`       | Generate technical stack documentation from codebase analysis            | Planning |
-| `/tech-stack:update`       | Update tech stack documentation after dependency changes                 | Planning |
-| `/prd:create-interactive`  | Create PRD interactively with clarifying questions                       | Planning |
-| `/prd:create`              | Create PRD directly without questions for simple features                | Planning |
-| `/prd:parse`               | Parse PRD into Task Master tasks with optional tag creation              | Tasks    |
-| `/task:next`               | Get next task and start implementing immediately                         | Tasks    |
-| `/task:done`               | Mark task complete and optionally get next task                          | Tasks    |
-| `/task:show`               | Show specific task details (e.g., `/task:show 2.1`)                      | Tasks    |
-| `/task:list`               | List all tasks in current tag                                            | Tasks    |
-| `/task:add`                | Add one or more tasks to current tag                                     | Tasks    |
-| `/task:add-interactive`    | Add tasks interactively with questions                                   | Tasks    |
-| `/task:update`             | Update tasks based on implementation changes                             | Tasks    |
-| `/task:update-interactive` | Update tasks interactively with questions                                | Tasks    |
-| `/task:expand`             | Break down tasks into subtasks                                           | Tasks    |
-| `/task:move`               | Reorganize task structure                                                | Tasks    |
-| `/task:research`           | Research best practices and update tasks                                 | Tasks    |
-| `/rules:create`            | Create new Cursor rule file with proper structure                        | Rules    |
-| `/rules:update`            | Synchronize Cursor rules to CLAUDE.md                                    | Rules    |
-| `/research:task`           | Research best practices for specific tasks                               | Research |
-| `/research:tech`           | Research technologies, frameworks, and tools                             | Research |
-| `/research:security`       | Research security best practices and vulnerabilities                     | Research |
-| `/research:architecture`   | Research architectural patterns and best practices                       | Research |
-| `/debug`                   | Systematic debugging process for complex issues                          | Support  |
+| Command                        | Description                                                              | Category      |
+| ------------------------------ | ------------------------------------------------------------------------ | ------------- |
+| `/create-app-design`           | Generate comprehensive app design document with project stage assessment | Docs          |
+| `/update-app-design`           | Update existing app design document based on codebase changes            | Docs          |
+| `/create-tech-stack`           | Generate comprehensive technical stack documentation from codebase analysis | Docs       |
+| `/update-tech-stack`           | Update tech stack documentation based on dependency changes              | Docs          |
+| `/create-prd-interactive`      | Generate a PRD interactively with clarifying questions for complex features | Docs       |
+| `/create-prd`                  | Generate a PRD directly without questions for simple, well-defined features | Docs       |
+| `/parse-prd`                   | Parse a PRD into Task Master tasks with optional tag creation           | Docs          |
+| `/create-rule`                 | Create a new Cursor rule file with proper structure and conventions      | Docs          |
+| `/update-rule`                 | Update existing Cursor rules based on new patterns or codebase evolution | Docs          |
+| `/update-project-structure`    | Update project structure documentation by running tree script            | Docs          |
+| `/next`                        | Get next task and start implementing it immediately                      | Tasks         |
+| `/done`                        | Mark task as complete and optionally get next task                      | Tasks         |
+| `/show`                        | Show specific task details                                               | Tasks         |
+| `/list`                        | List all tasks in current tag                                            | Tasks         |
+| `/add`                         | Add one or more tasks to the current tag                                | Tasks         |
+| `/add-interactive`             | Add tasks interactively with clarifying questions                       | Tasks         |
+| `/update-task`                 | Update tasks based on implementation changes                             | Tasks         |
+| `/update-task-interactive`     | Update tasks interactively with clarifying questions                    | Tasks         |
+| `/expand`                      | Break down tasks into subtasks                                           | Tasks         |
+| `/move`                        | Reorganize task structure                                                | Tasks         |
+| `/research`                    | Research best practices and update tasks                                 | Tasks         |
+| `/task`                        | Research best practices and update tasks                                 | Research      |
+| `/tech`                        | Research technologies, frameworks, and tools                             | Research      |
+| `/security`                    | Research security best practices and vulnerabilities                     | Research      |
+| `/architecture`                | Research architectural patterns and best practices                       | Research      |
+| `/create-snippet`              | Create a reusable code snippet                                           | Snippets      |
+| `/debug`                       | Systematic debugging process for complex issues                          | Support       |
 
 ### Command Details
 
-All commands follow a pattern of analyzing your project context and providing intelligent assistance. Commands in the Planning category typically ask clarifying questions to ensure accurate output. Task commands work within your current tag context. Research commands leverage web search for up-to-date information beyond the knowledge cutoff.
+All commands follow a pattern of analyzing your project context and providing intelligent assistance. Documentation commands typically ask clarifying questions to ensure accurate output. Task commands work within your current tag context. Research commands leverage web search for up-to-date information beyond the knowledge cutoff.
 
 ## Tips
 

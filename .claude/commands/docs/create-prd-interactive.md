@@ -12,6 +12,7 @@ description: Generate a PRD interactively with clarifying questions for complex 
 - **Existing PRDs:** !`ls -la .taskmaster/docs/prd-*.md 2>/dev/null || echo "No existing PRDs found"`
 - **Project Status:** @CLAUDE.md#project-status
 - **Tech Stack:** @.taskmaster/docs/tech-stack.md
+- **Project Structure:** !`bash .claude/scripts/tree.sh`
 - **PRD Template:** @.taskmaster/templates/example_prd.md
 
 ## Goal
@@ -22,18 +23,21 @@ To create a detailed Product Requirements Document (PRD) in Markdown format. The
 
 1. **Analyze Feature Request:** Think deeply about the user's feature request and its implications for the codebase.
 
-2. **Codebase Analysis:** 
+2. **Codebase Analysis:**
+
    - Search for relevant existing code patterns
    - Review components that might be affected
    - Identify potential integration points
    - Consider architectural impacts
 
-3. **Ask Clarifying Questions:** 
+3. **Ask Clarifying Questions:**
+
    - Ask 4-6 targeted questions based on codebase analysis
    - Provide lettered/numbered options for easy response
    - Focus on understanding the "what" and "why", not the "how"
 
-4. **Generate PRD:** 
+4. **Generate PRD:**
+
    - Follow the example PRD structure exactly
    - Include all required sections from the template
    - Ensure clarity for junior developers
@@ -105,6 +109,7 @@ Assume the primary reader of the PRD is a **junior developer**. Therefore, requi
 ```
 
 This will:
+
 1. Analyze the codebase for existing auth patterns
 2. Ask questions about auth requirements
 3. Generate a comprehensive PRD
